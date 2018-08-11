@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet type="text/xsl" href="response.xsl"/>
 <response>
-	<status></status>
-	<lead_id></lead_id>
-	<delivery_url></delivery_url>
-	<error></error>
-	<cost></cost>
+	<status>Matched</status>
+	<lead_id>6157773</lead_id>
+	<delivery_url>http://www.example.com/apply.php</delivery_url>
+	<cost>80.50</cost>
 </response>  
+
+<response>
+	<status>Unmatched</status>
+	<lead_id>6157775</lead_id>
+</response>
+
+<response>
+	<status>Error</status>
+	<error>Required value First_Name is missing</error>
+</response>
+</xsl:stylesheet>
