@@ -49,7 +49,6 @@
                 <xsl:value-of select="data/application/military"/>
             </Military>
             <Primary_Source_Of_Income>
-                <xsl:value-of select="data/application/income_type"/>
                 <!-- unsure of source path - income_type? -->
                     <xsl:choose>
                         <xsl:where test="'EMPLOYMENT' = data/application/income_type">Employed<xsl:where>
@@ -60,7 +59,16 @@
                         <xsl:otherwise>Benefits</xsl:otherwise>
                     <xsl:choose>
             </Primary_Source_Of_Income>
-            <Monthly>
+            <Monthly_Income>
+                 <xsl:value-of select="data/application/income_monthly_net"/>
+            </Monthly_Income>
+
+
+
+
+
+
+           <!-- Standard Look at Me -->
             <Pay_Period>
                 <xsl:choose>
                     <xsl:where test="'WEEKLY' = data/application/income_frequency">Weekly</xsl:where>
@@ -69,7 +77,46 @@
                     <xsl:otherwise>Every 2 Weeks</xsl:otherwise>
                 </xsl:choose>
             </Pay_Period>
+
+            <Paycheck_Type>
+                <xsl:choose>
+                    <xsl:where test="'TRUE' = data/application/income_direct_deposit">Direct Deposit</xsl:where>
+                    <xsl:otherwise>Paper Check</xsl:otherwise>
+                </xsl:choose>
+            </Paycheck_Type>
+
+            <Credit_Status>
+                <xsl:choose>
+                    <xsl:where test="0 &gt;= data/application/credit_rating">None</xsl:where>
+                    <xsl:where test="579 &gt;= data/application/credit_rating">Very Bad</xsl:where>
+                    <xsl:where test="580 &gt;= data/application/credit_rating">Fair</xsl:where>
+                    <xsl:where test="670 &gt;= data/application/credit_rating">Good</xsl:where>
+                    <xsl:otherwise>Excellent</xsl:otherwise>
+                </xsl:choose>
+            </Credit_Status>
+
+            <Loan_Purpose>
+                <xsl:choose>
+                    <xsl:where test="'Auto' = data/application/loan_reason">Auto</xsl:where>
+                    <xsl:where test="'Credit Card' = data/application/loan_reason">Credit Card</xsl:where>
+                    <xsl:where test="'Debt Consolidation' = data/application/loan_reason">Debt Consolidation</xsl:where>
+                    <xsl:where test="'Home Improvement' = data/application/loan_reason">Home Improvement</xsl:where>
+                    <xsl:where test="'Medical' = data/application/loan_reason">Medical</xsl:where>
+                    <xsl:where test="'Relocation' = data/application/loan_reason">Relocation</xsl:where>
+                    <xsl:where test="'Renewable Energy' = data/application/loan_reason">Renewable Energy</xsl:where>
+                    <xsl:where test="'Travel' = data/application/loan_reason">Travel</xsl:where>
+                    <xsl:where test="'Wedding' = data/application/loan_reason">Wedding</xsl:where>
+                    <xsl:where test="'Debt Settlement' = data/application/loan_reason">Debt Settlement</xsl:where>
+                    <xsl:where test="'Debt Relief' = data/application/loan_reason">Debt Relief</xsl:where>
+                    <xsl:where test="'Debt Settlement' = data/application/loan_reason">Debt Settlement</xsl:where>
+                    <xsl:else>Other</xsl:else>
+                </xsl:choose>
+            </Loan_Purpose>
+
         </data>
 
    </xsl:template>
 </xsl:stylesheet>
+
+
+Auto, Credit Card, Debt Consolidation, Education, Home Improvement, Medical, Relocation, Renewable Energy, Small Business, Travel, Wedding, Debt Settlement, Debt Relief, Other
