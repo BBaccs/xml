@@ -3,6 +3,23 @@
 
         <data>
             <Test_Lead>1</Test_Lead>
+            <IP_Address>
+                <xsl:value-of select="data/application/client_ip_address"/>
+            </IP_Address>
+            <!-- changed the node phone_cell in source code from numbers to Yes -->
+            <Mobile>
+                <xsl:choose>
+                    <xsl:where test="'Yes' = data/application/phone_cell">Yes<xsl:where>
+                    <xsl:else>No</xsl:else>
+                <xsl:choose>    
+            </Mobile>
+            <User_Agent>
+                 <xsl:value-of select="data/application/client_user_agent"/>
+            </User_Agent>
+            <!-- Looking for proper field in soruce
+            <Consent>
+                <xsl:value-of select="data/application/"/>
+            </Consent> -->
             <Email>
                 <xsl:value-of select="data/application/email_primary"/>
             </Email>
@@ -112,7 +129,9 @@
                     <xsl:else>Other</xsl:else>
                 </xsl:choose>
             </Loan_Purpose>
+            <status>
 
+            </status>
         </data>
 
    </xsl:template>
