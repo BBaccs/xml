@@ -3,6 +3,9 @@
 
         <data>
             <Test_Lead>1</Test_Lead>
+            <SourceUrl>
+                <xsl:value-of select="data/application/source_url"/>
+            </SourceUrl>
             <IP_Address>
                 <xsl:value-of select="data/application/client_ip_address"/>
             </IP_Address>
