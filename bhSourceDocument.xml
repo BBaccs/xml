@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='searchRoiOutgoing.xsl'?>
+<data>
+  <application>
+    <name_first formGroup="identity" formLabel="First Name">BOB</name_first>
+    <name_middle formGroup="identity" formLabel="Middle Name">LUCKY</name_middle>
+    <name_last formGroup="identity" formLabel="Last Name">ANDERSON</name_last>
+    <email_primary formGroup="contact" formLabel="EMail Address">SOMETHING@SOMETHING.COM</email_primary>
+    <income_frequency formGroup="income" formLabel="" formType="select" formMultiOptions="income_frequency">WEEKLY</income_frequency>
+  </application>
+</data>

@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<data>
+    <config>
+        <mode>LOCAL</mode>
+        <timeout>22</timeout>
+    </config>
+  <campaign>
+		<target>uk</target>
+		<lead_cost>55.00</lead_cost>
+		<campaign_name>uk_xml</campaign_name>
+        <schedule_property_short>property_short</schedule_property_short>
+  </campaign>
+  <application>
+    <application_id formGroup="identity" formLabel="Application ID">12345678</application_id>
+	<customer_id formGroup="identity" formLabel="Customer ID">123456</customer_id>
+    <name_first formGroup="identity" formLabel="First Name">BOB</name_first>
+    <name_middle formGroup="identity" formLabel="Middle Name">LUCKY</name_middle>
+    <name_last formGroup="identity" formLabel="Last Name">ANDERSON</name_last>
+    <title formGroup="identity" formLabel="Title"  formType="select" formMultiOptions="title">Mr</title>
+    <date_of_birth formGroup="identity" formLabel="DOB Y-m-d">1982-06-30</date_of_birth>
+    <date_dob_y formGroup="identity" formLabel="DOB Year">1982</date_dob_y>
+    <date_dob_m formGroup="identity" formLabel="DOB Month">06</date_dob_m>
+    <date_dob_d formGroup="identity" formLabel="DOB Day">30</date_dob_d>
+	<dob formGroup="identity" formLabel="DOB m/d/Y">06/30/1982</dob>
+    <ssn_part_1 formGroup="identity" formLabel="SSN Part 1" formLeadType="US">999</ssn_part_1>
+    <ssn_part_2 formGroup="identity" formLabel="SSN Part 2" formLeadType="US">66</ssn_part_2>
+    <ssn_part_3 formGroup="identity" formLabel="SSN Part 3" formLeadType="US">1111</ssn_part_3>
+    <social_security_number formGroup="identity" formLabel="" formLeadType="US">999661111</social_security_number>
+    <military formGroup="identity" formLabel="" formType="select" formMultiOptions="bool" formLeadType="US">FALSE</military>
+	<state_id_number formGroup="identity" formLabel="State ID Number" formLeadType="US">1234567890</state_id_number>
+	<state_issued_id formGroup="identity" formLabel="State Issued ID" formType="select" formMultiOptions="list_of_states" formLeadType="US">NV</state_issued_id>
+    <is_soap formGroup="identity" formLabel="Is SOAP">1</is_soap>
+    <test_app formGroup="identity" formLabel="Test Application">1</test_app>
+    <unique_id formGroup="identity" formLabel="Unique ID">abcdefghijklmnopqrstuvwxyz123456</unique_id>
+	<client_user_agent formGroup="identity" formLabel="User Agent">Mozilla/4.0 WebTV/2.8 (compatible; MSIE 4.0)</client_user_agent>
+	<redir_proxy formGroup="identity" formLabel="Redir Proxy">http://www.google.com/url?url=</redir_proxy>
+	<datax_pixel formGroup="identity" formLabel="DataX Pixel">abcdefghijklmnopqrstuvwxyz123456</datax_pixel>
+    <filter_flags formGroup="identity" formLabel="Filter Flags"></filter_flags>
+	<root_property_short formGroup="identity" formLabel="Root Property Short"></root_property_short>
+	<device_alias formGroup="identity" formLabel="Device Alias"></device_alias>
+
+    <home_street formGroup="contact" formLabel="Address">1234 Pecos Rd.</home_street>
+    <home_unit formGroup="contact" formLabel="Unit">1180</home_unit>
+    <home_city formGroup="contact" formLabel="City">Las Vegas</home_city>
+    <county formGroup="contact" formLabel="County" formLeadType="UK">Gwent</county>
+    <home_state formGroup="contact" formLabel="State" formType="select" formMultiOptions="list_of_states" formLeadType="US">NV</home_state>
+    <home_zip formGroup="contact" formLabel="Zip">89119</home_zip>
+    <phone_home formGroup="contact" formLabel="Home Phone">3332224444</phone_home>
+    <phone_cell formGroup="contact" formLabel="Mobile Phone">3332224444</phone_cell>
+    <phone_work formGroup="contact" formLabel="Work Phone">3332224444</phone_work>
+    <ext_work formGroup="contact" formLabel="Work Extension" formLeadType="US">4545</ext_work>
+    <email_primary formGroup="contact" formLabel="EMail Address">SOMETHING@SOMETHING.COM</email_primary>
+    <residence_start_date formGroup="contact" formLabel="" formLeadType="US">2003-06-27</residence_start_date>
+    <residence_length_months formGroup="contact" formLabel="" >12</residence_length_months>
+    <residence_type formGroup="contact" formLabel="">OWN</residence_type>
+    <client_ip_address formGroup="contact" formLabel="Client IP Address">10.20.130.140</client_ip_address>
+    <best_call_time formGroup="contact" formLabel="" formLeadType="US">MORNING</best_call_time>
+    <promo_id formGroup="contact" formLabel="Promo ID">3128</promo_id>
+    <promo_sub_code formGroup="contact" formLabel="Promo Sub Code">pw_test</promo_sub_code>
+	<site_name formGroup="contact" formLabel="">primecashadvance.com</site_name>
+	<site_name_original formGroup="contact" formLabel="">primecashadvance.com</site_name_original>
+	<license_key formGroup="contact" formLabel="">45734582348523470abcdef</license_key>
+    <rent_monthly formGroup="income" formLabel="Rent Monthly">1500</rent_monthly>
+    <loan_reason formGroup="income" formLabel="Loan Reason">I need money</loan_reason>
+    <credit_rating formGroup="income" formLabel="Credit Rating">600</credit_rating>
+    <employer_street formGroup="income" formLabel="Employer Street">123 somewhere dr.</employer_street>
+    <employer_unit formGroup="income" formLabel="Employer Unit">#102</employer_unit>
+    <employer_city formGroup="income" formLabel="Employer City">Las Vegas</employer_city>
+    <employer_state formGroup="income" formLabel="Employer State" formType="select" formMultiOptions="list_of_states" formLeadType="US">NV</employer_state>
+    <employer_zip formGroup="income" formLabel="Employer Zip">89123</employer_zip>
+
+    <bank_name formGroup="income" formLabel="" formLeadType="US">BANK OF KINGS</bank_name>
+    <bank_aba formGroup="income" formLabel="Bank ABA">102301564</bank_aba>
+    <bank_account formGroup="income" formLabel="">22031053</bank_account>
+    <bank_account_type formGroup="income" formLabel="">CHECKING</bank_account_type>
+    <debit_card formGroup="income" formLabel="" formType="select" formMultiOptions="debit_card" formLeadType="UK">1</debit_card>
+    <bank_length_months formGroup="income" formLabel="" formLeadType="US">12</bank_length_months>
+    <employer_name formGroup="income" formLabel="">SUPERFAST PHOTOGRAPHY</employer_name>
+    <income_monthly_net formGroup="income" formLabel="">3000</income_monthly_net>
+    <paycheck_amount formGroup="income" formLabel="">750</paycheck_amount>
+    <income_direct_deposit formGroup="income" formLabel="" formType="select" formMultiOptions="bool">TRUE</income_direct_deposit>
+    <date_of_hire formGroup="income" formLabel="" formLeadType="US">2007-11-09</date_of_hire>
+    <employer_length_months formGroup="income" formLabel="" >12</employer_length_months>
+    <loan_amount_desired formGroup="income" formLabel="">300</loan_amount_desired>
+    <loan_amount_desired_original formGroup="income" formLabel="">300</loan_amount_desired_original>
+    <income_type formGroup="income" formLabel="" formType="select" formMultiOptions="income_types">EMPLOYMENT</income_type>
+    <income_frequency formGroup="income" formLabel="" formType="select" formMultiOptions="income_frequency">WEEKLY</income_frequency>
+    <paydate1 formGroup="income" formLabel="">2008-12-01</paydate1>
+    <paydate2 formGroup="income" formLabel="">2008-12-08</paydate2>
+    <paydate3 formGroup="income" formLabel="" formLeadType="US">2008-12-15</paydate3>
+    <paydate4 formGroup="income" formLabel="" formLeadType="US">2008-12-22</paydate4>
+    <paydate5 formGroup="income" formLabel="" formLeadType="US">2008-12-29</paydate5>
+    <model_name formGroup="income" formLabel="Paydate Model">DW</model_name>
+    <next_pay_date formGroup="income" formLabel="" formLeadType="US">2008-12-01</next_pay_date>
+    <last_pay_date formGroup="income" formLabel="" formLeadType="US">2008-11-03</last_pay_date>
+    <day_string_one formGroup="income" formLabel="">MON</day_string_one>
+    <day_of_week formGroup="income" formLabel="">1</day_of_week>
+	<day_int_one formGroup="income" formLabel="">15</day_int_one>
+	<day_int_two formGroup="income" formLabel="">28</day_int_two>
+	<week_one formGroup="income" formLabel="">1</week_one>
+	<week_two formGroup="income" formLabel="">3</week_two>
+
+	<brick_and_mortar_store_store_id formGroup="brick_and_mortar" formLabel="Store ID" formSource="brick_and_mortar_store" formVariable="store_id" formLeadType="US"></brick_and_mortar_store_store_id>
+	<brick_and_mortar_store_address1 formGroup="brick_and_mortar" formLabel="Address 1" formSource="brick_and_mortar_store" formVariable="address1" formLeadType="US"></brick_and_mortar_store_address1>
+	<brick_and_mortar_store_address2 formGroup="brick_and_mortar" formLabel="Address 2" formSource="brick_and_mortar_store" formVariable="address2" formLeadType="US"></brick_and_mortar_store_address2>
+	<brick_and_mortar_store_city formGroup="brick_and_mortar" formLabel="City" formSource="brick_and_mortar_store" formVariable="city" formLeadType="US"></brick_and_mortar_store_city>
+	<brick_and_mortar_store_state formGroup="brick_and_mortar" formLabel="State" formSource="brick_and_mortar_store" formVariable="state" formLeadType="US"></brick_and_mortar_store_state>
+	<brick_and_mortar_store_zip_code formGroup="brick_and_mortar" formLabel="Zip Code" formSource="brick_and_mortar_store" formVariable="zip_code" formLeadType="US"></brick_and_mortar_store_zip_code>
+	<brick_and_mortar_store_phone1 formGroup="brick_and_mortar" formLabel="Phone 1" formSource="brick_and_mortar_store" formVariable="phone1" formLeadType="US"></brick_and_mortar_store_phone1>
+	<brick_and_mortar_store_fax formGroup="brick_and_mortar" formLabel="Fax Number" formSource="brick_and_mortar_store" formVariable="fax" formLeadType="US"></brick_and_mortar_store_fax>
+	<brick_and_mortar_store_dm_email formGroup="brick_and_mortar" formLabel="DM Email" formSource="brick_and_mortar_store" formVariable="dm_email" formLeadType="US"></brick_and_mortar_store_dm_email>
+	<brick_and_mortar_store_store_email formGroup="brick_and_mortar" formLabel="Store Email" formSource="brick_and_mortar_store" formVariable="store_email" formLeadType="US"></brick_and_mortar_store_store_email>
+	<brick_and_mortar_store_region_name formGroup="brick_and_mortar" formLabel="Region Name" formSource="brick_and_mortar_store" formVariable="region_name" formLeadType="US"></brick_and_mortar_store_region_name>
+  </application>
+	<debug>
+		<debug_flags>
+			1 or more flags
+		</debug_flags>
+	</debug>
+</data>
