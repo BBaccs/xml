@@ -3,8 +3,17 @@
 
         <data>
             <Test_Lead>1</Test_Lead>
+
+            <Sub_ID>
+                
+            </Sub_ID>
+            <Sub_ID_2>
+
+            </Sub_ID_2>
+
+            <!--correct node in source code for source URL? -->
             <SourceUrl>
-                <xsl:value-of select="data/application/source_url"/>
+                <xsl:value-of select="data/application/redir_proxy"/>
             </SourceUrl>
             <IP_Address>
                 <xsl:value-of select="data/application/client_ip_address"/>
