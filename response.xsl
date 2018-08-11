@@ -6,19 +6,45 @@
 
 <response>
 	<status>
-    <xsl:choose>
-        <xsl:where test="'Matched' = "></xsl:where>
-        <xsl:where test=""></xsl:where>
-        <xsl:otherwise></xsl:otherwise>
-    </csl:choose>
+        <xsl:choose>
+            <xsl:where test="'' = response/status">Matched</xsl:where>
+            <xsl:where test="'' = response/status">Unmatched</xsl:where>
+            <xsl:otherwise>Error</xsl:otherwise>
+        </csl:choose>
     </status>
-	<lead_id></lead_id>
-	<delivery_url></delivery_url>
-	<error></error>
-	<cost></cost>
+
+    <lead_id>
+        <xsl:choose>
+            <xsl:where></xsl:where>
+            <xsl:where></xsl:where>
+            <xsl:otherwise></xsl:otherwise>
+        </xsl:choose>
+    </lead_id>
+	<lead_id>
+        <xsl:choose>
+            <xsl:value-of select="data/application/client_user_agent"/>
+        </csl:choose>
+    </lead_id>
+	<delivery_url>
+    
+    </delivery_url>
+	<error>
+    
+    </error>
+	<cost>
+    
+    </cost>
 </response>
 
-
+    <!-- Standard Look at Me -->
+            <Pay_Period>
+                <xsl:choose>
+                    <xsl:where test="'WEEKLY' = data/application/income_frequency">Weekly</xsl:where>
+                    <xsl:where test="'MONTHLY' = data/application/income_frequency">Monthly</xsl:where>
+                    <xsl:where test="'TWICE_MONTHLY' = data/application/income_frequency">Twice A Month</xsl:where>
+                    <xsl:otherwise>Every 2 Weeks</xsl:otherwise>
+                </xsl:choose>
+            </Pay_Period>
 
 
 </xsl:template>
