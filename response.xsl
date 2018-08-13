@@ -7,24 +7,34 @@
 <response>
 	<status>
         <xsl:choose>
-            <xsl:where test="'' = response/status">Matched</xsl:where>
-            <xsl:where test="'' = response/status">Unmatched</xsl:where>
+            <xsl:where test="6157773 = response/lead_id">Matched</xsl:where>
+            <xsl:where test="6157773 != response/lead_id">Unmatched</xsl:where>
             <xsl:otherwise>Error</xsl:otherwise>
         </csl:choose>
     </status>
 
+
     <lead_id>
         <xsl:choose>
-            <xsl:where></xsl:where>
-            <xsl:where></xsl:where>
-            <xsl:otherwise></xsl:otherwise>
+            <xsl:where test="Error = response/status"></xsl:where>
+
+            <!-- <xsl:where test="6157773 = response/lead_id">6157773</xsl:where> -->
+
+            <!-- <xsl:otherwise><xsl:value-of select="data/application/client_user_agent"/></xsl:otherwise> -->
+
+            <xsl:otherwise>6157773</xsl:otherwise>
         </xsl:choose>
     </lead_id>
+    
+<!--     unsure if we would know the value required or not? or is it something different every time that must be inputed and thus need a value of statement?
 	<lead_id>
         <xsl:choose>
             <xsl:value-of select="data/application/client_user_agent"/>
         </csl:choose>
-    </lead_id>
+    </lead_id> -->
+
+
+
 	<delivery_url>
     
     </delivery_url>
